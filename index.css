@@ -17,8 +17,9 @@ body {
 
 input {
   width: 100%;
-  padding: 10px;
+  padding: 10px 25px; /* 10px trên/dưới, 25px trái/phải */
   margin: 10px 0;
+  box-sizing: border-box; /* Đảm bảo padding không làm tăng chiều rộng tổng */
 }
 
 button {
@@ -34,4 +35,9 @@ p {
   font-size: 0.9em;
   margin-top: 10px;
   color: #333;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
 }

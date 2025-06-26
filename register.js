@@ -5,17 +5,24 @@ import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebase
 document.getElementById('registerBtn').addEventListener('click', () => {
   const email = document.getElementById('registerEmail').value;
   const password = document.getElementById('registerPassword').value;
+  const message = document.getElementById('registerMessage');
 
   // Gọi hàm tạo tài khoản bằng Firebase
   createUserWithEmailAndPassword(auth, email, password)
     .then(userCredential => {
-      // Đăng ký thành công
-      const user = userCredential.user;
-      document.getElementById('registerMessage').innerText = 'Đăng ký thành công! Hãy quay lại đăng nhập.';
-      console.log("User đăng ký:", user);
+    // Đăng ký thành công
+    message.innerText = 'Đăng ký thành công! Bạn có thể đăng nhập.';
+    message.style.color = 'green';
+    console.log("User đăng ký:", userCredential.user);
+    setTimeout(() => 
+        {
+        // Chuyển hướng về trang đăng nhập sau 1.5 giây
+        window.location.href = "index.html";
+        }, 1500);
     })
     .catch(error => {
       // Lỗi đăng ký
-      document.getElementById('registerMessage').innerText = 'Lỗi: ' + error.message;
+      message.innerText = 'Lỗi: ' + error.message;
+      message.style.color = 'red';
     });
 });
