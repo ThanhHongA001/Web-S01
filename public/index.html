@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng nhập</title>
+  <link rel="stylesheet" href="../styles/index.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Đăng nhập</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Tên đăng nhập" required>
+      <div class="password-wrapper">
+        <input type="password" id="password" placeholder="Mật khẩu" required>
+        <button type="button" id="togglePassword">👁️</button>
+      </div>
+      <button type="submit">Đăng nhập</button>
+      <p id="message"></p>
+      <a href="register.html">Chưa có tài khoản? Đăng ký</a>
+    </form>
+  </div>
+  <script>
+    const passwordInput = document.getElementById('password');
+    document.getElementById('togglePassword').onclick = function() {
+      passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
+    };
+    document.getElementById('loginForm').onsubmit = async function(e) {
+      e.preventDefault();
+      const username = document.getElementById('username').value.trim();
+      const password = passwordInput.value;
+      const message = document.getElementById('message');
+      message.textContent = '';
+      if (!username || !password) {
+        message.textContent = 'Vui lòng nhập đầy đủ thông tin!';
+        if (!username) document.getElementById('username').focus();
+        else passwordInput.focus();
+        return;
+      }
+      const res = await fetch('/api/login', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({username, password})
+      });
+      const data = await res.json();
+      if (data.success) {
+        window.location.href = 'home.html';
+      } else {
+        message.style.color = 'red';
+        message.textContent = data.message;
+        if (data.code === 'NOT_FOUND') document.getElementById('username').focus();
+        else if (data.code === 'WRONG_PASSWORD') passwordInput.focus();
+      }
+    };
+  </script>
+</body>
+</html>

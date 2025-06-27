@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng ký tài khoản</title>
+  <link rel="stylesheet" href="../styles/index.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Đăng ký tài khoản</h2>
+    <form id="registerForm">
+      <input type="text" id="username" placeholder="Tên đăng nhập" required>
+      <input type="password" id="password" placeholder="Mật khẩu" required>
+      <input type="password" id="confirmPassword" placeholder="Nhập lại mật khẩu" required>
+      <button type="submit">Đăng ký</button>
+      <p id="message"></p>
+      <a href="index.html">Đã có tài khoản? Đăng nhập</a>
+    </form>
+  </div>
+  <script>
+    document.getElementById('registerForm').onsubmit = async function(e) {
+      e.preventDefault();
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+      const message = document.getElementById('message');
+      message.textContent = '';
+      if (!username || !password || !confirmPassword) {
+        message.textContent = 'Vui lòng nhập đầy đủ thông tin!';
+        return;
+      }
+      if (password !== confirmPassword) {
+        message.textContent = 'Mật khẩu nhập lại không khớp!';
+        return;
+      }
+      const res = await fetch('/api/register', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({username, password})
+      });
+      const data = await res.json();
+      if (data.success) {
+        message.style.color = 'green';
+        message.textContent = 'Đăng ký thành công!';
+        setTimeout(() => window.location.href = 'index.html', 1500);
+      } else {
+        message.style.color = 'red';
+        message.textContent = data.message;
+      }
+    };
+  </script>
+</body>
+</html>
+
