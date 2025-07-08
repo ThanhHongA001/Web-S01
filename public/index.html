@@ -6,8 +6,21 @@
     <link rel="stylesheet" href="../src/styles/main.css">
 </head>
 <body>
-    <h1>Chào mừng đến với Trang Chủ</h1>
-    <button onclick="window.location.href='Main_Home_01.js'">Đăng nhập</button>
-    <button onclick="window.location.href='Main_Home_02.js'">Đăng ký</button>
+    <div class="header">
+        <div class="header-title">Trang Chủ</div>
+        <div class="header-actions">
+            <button id="loginBtn">Đăng nhập</button>
+            <button id="registerBtn">Đăng ký</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('loginBtn').onclick = function() {
+            window.location.href = 'Main_Home_01.html';
+        };
+        document.getElementById('registerBtn').onclick = function() {
+            window.location.href = 'Main_Home_02.html';
+        };
+    </script>
+    <script src="index.js"></script>
 </body>
 </html>

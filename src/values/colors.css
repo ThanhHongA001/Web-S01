@@ -1,0 +1,22 @@
+:root {
+    --primary:    #1976d2;
+    --secondary:  #388e3c;
+    --accent:     #ffb300;
+    --error:      #e53935;
+    --warning:    #ffa726;
+    --info:       #0288d1;
+    --success:    #43a047;
+    --background: #f5f7fa;
+    --surface:    #ffffff;
+    --text:       #222222;
+    --text-light: #ffffff;
+    --border:     #e0e0e0;
+    --shadow:     rgba(0,0,0,0.08);
+
+    /* Các màu đang dùng trong main.css */
+    --header-title: #ff5722;
+    --button-bg: #fff;
+    --button-text: #1976d2;
+    --button-hover-bg: #1976d2;
+    --button-hover-text: #fff;
+}
