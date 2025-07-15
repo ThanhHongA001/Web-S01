@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sản phẩm - Web-S01</title>
-
-  <!-- CSS chung và riêng -->
-  <link rel="stylesheet" href="../src/styles/main.css" />
-  <link rel="stylesheet" href="../src/styles/main_SanPham.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sản phẩm</title>
+  <link rel="stylesheet" href="../src/styles/main.css">
+  <link rel="stylesheet" href="../src/styles/main_SanPham.css">
 </head>
 <body>
 
@@ -16,7 +14,7 @@
     <h1>Web-S01</h1>
     <nav>
       <ul>
-        <li><a href="index.html">Trang Chủ</a></li>
+        <li><a href="../index.html">Trang Chủ</a></li>
         <li><a href="Main_SanPham.html">Sản phẩm</a></li>
         <li><a href="Main_GioHang.html">Giỏ hàng</a></li>
         <li class="taikhoan">
@@ -30,18 +28,17 @@
     </nav>
   </header>
 
-  <!-- Nội dung sản phẩm -->
-  <main id="product-container">
-    <!-- JavaScript sẽ render danh sách sản phẩm từ Data_SanPham.js -->
+  <!-- Nội dung trang sản phẩm -->
+  <main id="sanpham-container">
+    <!-- JS sẽ render danh sách sản phẩm tại đây -->
   </main>
 
-  <!-- Footer -->
+  <!-- Footer dùng chung -->
   <footer>
     <p>© 2025 Web-S01. Tất cả quyền được bảo lưu.</p>
     <p>Email: lienhe@webs01.com | SĐT: 0375331875</p>
   </footer>
 
-  <!-- Script JS riêng cho trang sản phẩm -->
-  <script type="module" src="../src/pages/Main_SanPham.js"></script>
+  <script src="../src/pages/Main_SanPham.js"></script>
 </body>
 </html>
