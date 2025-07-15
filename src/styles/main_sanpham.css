@@ -1,0 +1,58 @@
+/* Container chứa toàn bộ danh sách sản phẩm */
+#product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Thẻ sản phẩm */
+.product-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Ảnh sản phẩm */
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Tên sản phẩm */
+.product-card h3 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+  text-align: center;
+}
+
+/* Giá sản phẩm */
+.product-card p {
+  font-size: 16px;
+  color: #1e90ff;
+  margin-bottom: 10px;
+}
+
+/* Nút thêm vào giỏ */
+.product-card button {
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.product-card button:hover {
+  background-color: #125bb5;
+}

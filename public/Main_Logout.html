@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đăng ký - Web-S01</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../src/styles/main.css" />
+  <link rel="stylesheet" href="../src/styles/main_Logout.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Web-S01</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Trang Chủ</a></li>
+        <li><a href="Main_SanPham.html">Sản phẩm</a></li>
+        <li><a href="Main_GioHang.html">Giỏ hàng</a></li>
+        <li class="taikhoan">
+          <a href="#">Tài Khoản</a>
+          <ul>
+            <li><a href="Main_Login.html">Đăng nhập</a></li>
+            <li><a href="Main_Logout.html">Đăng ký</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <section id="register-form">
+      <h2>Đăng ký tài khoản mới</h2>
+      <form id="formRegister">
+        <label for="new-username">Tài khoản:</label>
+        <input type="text" id="new-username" name="new-username" required />
+        <label for="new-password">Mật khẩu:</label>
+        <input type="password" id="new-password" name="new-password" required />
+        <button type="submit">Đăng ký</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Web-S01. Tất cả quyền được bảo lưu.</p>
+    <p>Email: lienhe@webs01.com | SĐT: 0375331875</p>
+  </footer>
+
+  <!-- JS -->
+  <script type="module" src="../src/pages/Main_Logout.js"></script>
+</body>
+</html>

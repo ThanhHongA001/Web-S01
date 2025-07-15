@@ -1,0 +1,47 @@
+/* Container đăng nhập */
+#login-form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+/* Tiêu đề form */
+#login-form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #1e90ff;
+}
+
+/* Nhãn và input */
+#login-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+#login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Nút submit */
+#login-form button {
+  width: 100%;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#login-form button:hover {
+  background-color: #125bb5;
+}
