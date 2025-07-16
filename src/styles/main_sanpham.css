@@ -1,60 +1,55 @@
 /* src/styles/main_SanPham.css */
 
-/* Container chính chứa danh sách sản phẩm */
-#sanpham-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px; /* khoảng cách giữa các sản phẩm */
+/* Container danh sách sản phẩm */
+#danhSachSanPham {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* 8 sản phẩm trên 1 hàng */
+  gap: 10px;
   padding: 20px;
-  justify-content: flex-start;
 }
 
-/* Card từng sản phẩm */
-.card-sanpham {
-  width: calc((100% - 7 * 15px) / 8); /* để chứa 8 sp / hàng */
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
+/* Khung từng sản phẩm */
+.sanpham {
+  background-color: white;
+  border: 1px solid #ddd;
   border-radius: 6px;
-  text-align: center;
   padding: 10px;
-  box-sizing: border-box;
-  transition: transform 0.2s;
-}
-
-.card-sanpham:hover {
-  transform: scale(1.03);
+  text-align: center;
+  aspect-ratio: 3 / 4; /* Tỉ lệ khung 3:4 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* Ảnh sản phẩm */
-.card-sanpham img {
+.sanpham img {
   width: 100%;
-  aspect-ratio: 3 / 4; /* giữ tỉ lệ ảnh 3:4 */
-  object-fit: cover;
-  border-radius: 4px;
+  height: auto;
+  object-fit: contain;
+  max-height: 60%;
 }
 
-/* Tên và giá */
-.card-sanpham h3 {
-  font-size: 16px;
-  margin: 8px 0 4px;
+/* Tên và giá sản phẩm */
+.sanpham h3 {
+  font-size: 1rem;
+  margin: 5px 0;
 }
 
-.card-sanpham p {
-  font-size: 14px;
-  color: #333;
-  margin: 0 0 10px;
+.sanpham p {
+  color: #555;
+  margin-bottom: 10px;
 }
 
-/* Nút thêm vào giỏ */
-.card-sanpham button {
-  padding: 6px 10px;
-  background-color: #4CAF50;
+/* Nút mua */
+.sanpham button {
+  padding: 8px 12px;
+  background-color: #1e90ff;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
-.card-sanpham button:hover {
-  background-color: #45a049;
+.sanpham button:hover {
+  background-color: #0074e4;
 }

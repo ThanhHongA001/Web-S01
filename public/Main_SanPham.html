@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sản phẩm</title>
-  <link rel="stylesheet" href="../src/styles/main.css">
-  <link rel="stylesheet" href="../src/styles/main_sanpham.css">
-</head>
-<body>
 
-  <header>
-    <h1>Web-S01</h1>
-    <nav>
-      <ul>
-        <li><a href="../index.html">Trang Chủ</a></li>
-        <li><a href="../public/Main_SanPham.html">Sản phẩm</a></li>
-        <li><a href="../public/Main_GioHang.html">Giỏ hàng</a></li>
-        <li class="taikhoan">
-          <a href="#">Tài Khoản</a>
-          <ul>
-            <li><a href="../public/Main_Login.html">Đăng nhập</a></li>
-            <li><a href="../public/Main_Logout.html">Đăng ký</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm</title>
+    <link rel="stylesheet" href="../src/styles/main.css">
+    <link rel="stylesheet" href="../src/styles/main_SanPham.css">
+  </head>
 
-  <!-- Nội dung trang sản phẩm -->
-  <main id="sanpham-container">
-    <!-- JS sẽ render danh sách sản phẩm tại đây -->
-  </main>
+  <body>
 
-  <!-- Footer dùng chung -->
-  <footer>
-    <p>© 2025 Web-S01. Tất cả quyền được bảo lưu.</p>
-    <p>Email: lienhe@webs01.com | SĐT: 0375331875</p>
-  </footer>
+    <header>
+      <h1>Web-S01</h1>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Trang Chủ</a></li>
+          <li><a href="../public/Main_SanPham.html">Sản phẩm</a></li>
+          <li><a href="../public/Main_GioHang.html">Giỏ hàng</a></li>
+          <li class="taikhoan">
+            <a href="#">Tài Khoản</a>
+            <ul>
+              <li><a href="../public/Main_Login.html">Đăng nhập</a></li>
+              <li><a href="../public/Main_Logout.html">Đăng ký</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-  <!-- Import các file JS cần thiết -->
+    <main>
+      <div id="danhSachSanPham"></div>
+    </main>
 
-  <script src="../src/Data_SanPham.js"></script>
-  <script src="../src/pages/Main_SanPham.js"></script>
+    <script src="../src/data/Data_SanPham.js"></script>
+    <script src="../src/pages/Main_SanPham.js"></script>
 
-</body>
+
+    <footer>
+      <p>© 2025 Web-S01. Tất cả quyền được bảo lưu.</p>
+      <p>Email: lienhe@webs01.com | SĐT: 0375331875</p>
+    </footer>
+
+  </body>
+  
 </html>

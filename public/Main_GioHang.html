@@ -27,15 +27,32 @@
     </nav>
   </header>
 
-  <main id="giohang-container">
-    <!-- JS sẽ render sản phẩm trong giỏ hàng tại đây -->
-  </main>
+  <main>
+  <table id="bangGioHang">
+    <thead>
+      <tr>
+        <th>STT</th>
+        <th>Tên sản phẩm</th>
+        <th>Giá</th>
+        <th>Số lượng</th>
+        <th>Thành tiền</th>
+        <th>Hành động</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div class="tongtien">
+    <strong>Tổng tiền: </strong><span id="tongTien">0</span> đ
+  </div>
+</main>
+
+<script src="../src/pages/Main_GioHang.js"></script>
 
   <footer>
     <p>© 2025 Web-S01. Tất cả quyền được bảo lưu.</p>
     <p>Email: lienhe@webs01.com | SĐT: 0375331875</p>
   </footer>
 
-  <script src="../src/pages/Main_GioHang.js"></script>
 </body>
 </html>

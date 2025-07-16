@@ -1,102 +1,105 @@
-/* Reset mặc định trình duyệt */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body tổng thể */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  background-color: #f4f4f4;
+  color: #333;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* ===================== HEADER ===================== */
-
-/* Header luôn nằm trên cùng */
+/* Header */
 header {
   background-color: #1e90ff;
   color: white;
-  padding: 15px 30px;
+  padding: 10px 20px;
   display: flex;
-  justify-content: space-between; /* chia trái phải */
+  justify-content: space-between;
   align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
 
-/* Tiêu đề bên trái */
 header h1 {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
-/* Menu bên phải */
+/* Navigation */
 nav ul {
   list-style: none;
   display: flex;
+  align-items: center;
   gap: 20px;
+  position: relative;
 }
 
-/* Mục trong menu */
 nav ul li {
   position: relative;
 }
 
-/* Link menu */
 nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s;
+  transition: 0.3s;
 }
 
 nav a:hover {
-  color: #ffdd57;
+  text-decoration: underline;
 }
 
-/* Dropdown menu */
-nav .taikhoan > ul {
-  display: none;
+/* Dropdown */
+.taikhoan > a::after {
+  content: " ▼";
+  font-size: 0.7rem;
+}
+
+.taikhoan ul {
   position: absolute;
-  top: 30px;
-  left: 0;
-  background-color: #0f66c5;
-  padding: 10px;
-  border-radius: 4px;
+  top: 100%;
+  right: 0;
+  background-color: #0074e4;
+  display: none;
   flex-direction: column;
   min-width: 140px;
+  border-radius: 4px;
+  overflow: hidden;
   z-index: 999;
 }
 
-nav .taikhoan:hover > ul {
+.taikhoan ul li a {
+  padding: 10px;
+  display: block;
+  white-space: nowrap;
+}
+
+.taikhoan ul li a:hover {
+  background-color: #005bb5;
+}
+
+/* Hiển thị dropdown khi hover hoặc có class "show" */
+.taikhoan:hover ul,
+.taikhoan.show ul {
   display: flex;
 }
 
-nav .taikhoan ul li {
-  margin: 5px 0;
-}
-
-/* ===================== MAIN ===================== */
-
+/* Main */
 main {
   flex: 1;
   padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  background-color: #f4f4f4;
 }
 
-/* ===================== FOOTER ===================== */
-
-
+/* Footer dưới đáy */
 footer {
   background-color: #1e90ff;
   color: white;
   text-align: center;
-  padding: 15px 10px;
+  padding: 10px;
+  font-size: 0.9rem;
   margin-top: auto;
-  font-size: 14px;
 }
