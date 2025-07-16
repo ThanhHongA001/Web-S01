@@ -27,6 +27,25 @@
     </nav>
   </header>
 
+    <main>
+    <div class="login-container">
+      <h2>Đăng nhập tài khoản</h2>
+      <form id="formDangNhap">
+        <label for="tenDangNhap">Tên đăng nhập:</label>
+        <input type="text" id="tenDangNhap" name="tenDangNhap" required>
+
+        <label for="matKhau">Mật khẩu:</label>
+        <input type="password" id="matKhau" name="matKhau" required>
+
+        <button type="submit">Đăng nhập</button>
+        <p id="loiDangNhap" class="error-message"></p>
+      </form>
+    </div>
+  </main>
+
+  <script src="../src/data/Data_Accout.js"></script>
+  <script src="../src/pages/Main_Login.js"></script>
+
   <footer>
     <p>© 2025 Web-S01. Tất cả quyền được bảo lưu.</p>
     <p>Email: lienhe@webs01.com | SĐT: 0375331875</p>
