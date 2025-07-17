@@ -1,0 +1,44 @@
+/* main_search.css */
+
+/* Style ô tìm kiếm */
+.search-box {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.search-box input {
+  padding: 10px;
+  width: 60%;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+/* Style danh sách kết quả */
+.results-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.sanpham {
+  width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  background-color: #fafafa;
+  transition: transform 0.2s;
+}
+
+.sanpham:hover {
+  transform: scale(1.05);
+}
+
+.sanpham img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}

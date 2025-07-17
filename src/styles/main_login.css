@@ -1,12 +1,13 @@
 /* src/styles/main_Login.css */
 
+/* Giao diện container giống khung đăng ký */
 .login-container {
   max-width: 400px;
   margin: 40px auto;
-  background-color: white;
-  padding: 20px;
+  background-color: #f9f9f9; /* đồng bộ với đăng ký */
+  padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 0 10px #ccc;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
 .login-container h2 {
@@ -14,18 +15,13 @@
   margin-bottom: 20px;
 }
 
-.login-container label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
 .login-container input {
   width: 100%;
   padding: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-size: 1rem;
 }
 
 .login-container button {
@@ -43,8 +39,10 @@
   background-color: #0074e4;
 }
 
+/* Thông báo lỗi hiển thị rõ */
 .error-message {
   color: red;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   text-align: center;
+  margin-top: 10px;
 }

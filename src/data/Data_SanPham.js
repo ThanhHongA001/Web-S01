@@ -1,98 +1,12 @@
-const dataSanPham = [
-  {
-    id: 1,
-    ten: "Áo Thun Nam Basic",
-    gia: 120000,
-    img: "../src/drawable/img_01.jpg",
-  },
-  {
-    id: 2,
-    ten: "Quần Jean Nữ Cá Tính",
-    gia: 250000,
-    img: "../src/drawable/img_02.jpg",
-  },
-  {
-    id: 3,
-    ten: "Áo Hoodie Unisex",
-    gia: 280000,
-    img: "../src/drawable/img_03.jpg",
-  },
-  {
-    id: 4,
-    ten: "Áo Polo Nam",
-    gia: 170000,
-    img: "../src/drawable/img_04.jpg",
-  },
-  {
-    id: 5,
-    ten: "Chân Váy Dài",
-    gia: 190000,
-    img: "../src/drawable/img_05.jpg",
-  },
-  {
-    id: 6,
-    ten: "Quần Jogger Nam",
-    gia: 210000,
-    img: "../src/drawable/img_06.jpg",
-  },
-  {
-    id: 7,
-    ten: "Áo Khoác Bomber",
-    gia: 320000,
-    img: "../src/drawable/img_07.jpg",
-  },
-  {
-    id: 8,
-    ten: "Váy Hoa Nữ",
-    gia: 230000,
-    img: "../src/drawable/img_08.jpg",
-  },
-  {
-    id: 9,
-    ten: "Quần Short Thể Thao",
-    gia: 140000,
-    img: "../src/drawable/img_09.jpg",
-  },
-  {
-    id: 10,
-    ten: "Áo Croptop Nữ",
-    gia: 160000,
-    img: "../src/drawable/img_10.jpg",
-  },
-  {
-    id: 11,
-    ten: "Áo Dài Tay Nam",
-    gia: 150000,
-    img: "../src/drawable/img_11.jpg",
-  },
-  {
-    id: 12,
-    ten: "Set Bộ Nữ",
-    gia: 290000,
-    img: "../src/drawable/img_12.jpg",
-  },
-  {
-    id: 13,
-    ten: "Áo Tank Top Gym",
-    gia: 135000,
-    img: "../src/drawable/img_13.jpg",
-  },
-  {
-    id: 14,
-    ten: "Áo Vest Nam",
-    gia: 350000,
-    img: "../src/drawable/img_14.jpg",
-  },
-  {
-    id: 15,
-    ten: "Quần Tây Công Sở",
-    gia: 240000,
-    img: "../src/drawable/img_15.jpg",
-  },
-  {
-    id: 16,
-    ten: "Váy Body Gợi Cảm",
-    gia: 275000,
-    img: "../src/drawable/img_16.jpg",
-  },
-];
+// File: Data_SanPham.js
+
+const dataSanPham = [];
+
+for (let i = 1; i <= 1000; i++) {
+  dataSanPham.push({
+    id: i,
+    ten: `Sản phẩm số ${i}`, // tên sản phẩm sẽ là "Sản phẩm số 1", "Sản phẩm số 2", ...
+    gia: 100000 + (i * 1000), // mỗi sản phẩm có giá khác nhau, tăng dần
+    img: `../src/drawable/img_${String(i).padStart(2, '0')}.jpg`, // tự động sinh tên ảnh từ img_01.jpg đến img_100.jpg
+  });
+}

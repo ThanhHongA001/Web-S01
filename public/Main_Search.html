@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tìm kiếm sản phẩm</title>
+  <link rel="stylesheet" href="../src/styles/main.css">
+  <link rel="stylesheet" href="../src/styles/main_SanPham.css"> <!-- Dùng lại style sản phẩm -->
+</head>
+<body>
+
+  <header>
+    <h1>Web-S01</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Trang Chủ</a></li>
+        <li><a href="Main_SanPham.html">Sản phẩm</a></li>
+        <li><a href="Main_GioHang.html">Giỏ hàng</a></li>
+        <li><a href="Main_Search.html">Tìm Kiếm</a></li>
+        <li class="taikhoan">
+          <a href="#">Tài Khoản</a>
+          <ul>
+            <li><a href="Main_Login.html">Đăng nhập</a></li>
+            <li><a href="Main_Logout.html">Đăng ký</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Thanh tìm kiếm -->
+    <section class="search-box" style="text-align: center; margin: 30px 0;">
+      <input type="text" id="searchInput" placeholder="Nhập tên sản phẩm..." style="padding: 10px; width: 60%; font-size: 16px; border: 1px solid #aaa; border-radius: 4px;" />
+    </section>
+
+    <!-- Kết quả tìm kiếm hiển thị theo dạng danh sách sản phẩm -->
+    <section id="danhSachSanPham">
+      <!-- JavaScript sẽ render nội dung ở đây -->
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Web-S01. Tất cả quyền được bảo lưu.</p>
+    <p>Email: lienhe@webs01.com | SĐT: 0375331875</p>
+  </footer>
+
+  <!-- Import dữ liệu sản phẩm và JS -->
+  <script src="../src/data/Data_SanPham.js"></script>
+  <script src="../src/pages/Main_Search.js"></script>
+
+</body>
+</html>

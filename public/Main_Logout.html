@@ -16,6 +16,7 @@
         <li><a href="../index.html">Trang Chủ</a></li>
         <li><a href="../public/Main_SanPham.html">Sản phẩm</a></li>
         <li><a href="../public/Main_GioHang.html">Giỏ hàng</a></li>
+        <li><a href="../public/Main_Search.html">Tìm Kiếm </a></li>
         <li class="taikhoan">
           <a href="#">Tài Khoản</a>
           <ul>
@@ -26,6 +27,22 @@
       </ul>
     </nav>
   </header>
+
+<main>
+  <section class="form-dangky">
+    <h2>Đăng ký tài khoản</h2>
+    <form id="formDangKy">
+      <input type="text" id="username" placeholder="Tên đăng nhập" required>
+      <input type="password" id="password" placeholder="Mật khẩu" required>
+      <button type="submit">Đăng ký</button>
+    </form>
+    <p id="thongBao" style="color:red; margin-top: 10px;"></p>
+  </section>
+</main>
+
+<script src="../src/data/Data_Accout.js"></script>
+<script src="../src/pages/Main_Logout.js"></script>
+
 
   <footer>
     <p>© 2025 Web-S01. Tất cả quyền được bảo lưu.</p>

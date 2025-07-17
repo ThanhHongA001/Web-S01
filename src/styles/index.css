@@ -1,0 +1,30 @@
+/* style cho banner container */
+.banner-container {
+  width: calc(100% - 350px); /* trừ 2 cạnh mỗi bên 175px */
+  height: 200px;
+  margin: 20px auto;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  text-align: center;
+  background-color: #fff;
+}
+
+/* style cho ảnh banner */
+#bannerImage {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* style cho tên sản phẩm nổi trên banner */
+#bannerTen {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 5px black;
+}

@@ -1,0 +1,38 @@
+/* main_logout.css */
+
+.form-dangky {
+  max-width: 400px;
+  margin: 40px auto;
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-dangky h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-dangky input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-dangky button {
+  width: 100%;
+  padding: 10px;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-dangky button:hover {
+  background-color: #0074e4;
+}
