@@ -37,3 +37,11 @@ function themVaoGio(idSanPham) {
 
 // Load danh sách khi trang được load
 document.addEventListener("DOMContentLoaded", hienThiSanPham);
+
+
+function locSanPham(loai) {
+  const container = document.getElementById("danhSachSanPham");
+  const dsLoc = loai ? dataSanPham.filter(sp => sp.loai === loai) : dataSanPham;
+  container.innerHTML = dsLoc.map(sp => taoKhungSanPham(sp)).join("");
+}
+

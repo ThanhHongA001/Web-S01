@@ -29,12 +29,32 @@
     </nav>
   </header>
 
-    <main>
+    <!-- <main>
       <div id="danhSachSanPham"></div>
-    </main>
+    </main> -->
+
+    <main>
+  <div class="wrapper">
+    <!-- Cột trái: Danh mục -->
+    <aside class="sidebar">
+      <h2>Danh mục</h2>
+      <ul>
+        <li><a href="#" onclick="locSanPham('')">Tất cả</a></li>
+        <li><a href="#" onclick="locSanPham('dien-thoai')">Sp 1</a></li>
+        <li><a href="#" onclick="locSanPham('laptop')">Sp 2</a></li>
+        <li><a href="#" onclick="locSanPham('tablet')">Sp 3</a></li>
+      </ul>
+    </aside>
+
+    <!-- Cột phải: Danh sách sản phẩm -->
+    <section id="danhSachSanPham"></section>
+  </div>
+</main>
+
 
     <script src="../src/data/Data_SanPham.js"></script>
     <script src="../src/pages/Main_SanPham.js"></script>
+
 
 
     <footer>

@@ -3,7 +3,7 @@
 /* Container danh sách sản phẩm */
 #danhSachSanPham {
   display: grid;
-  grid-template-columns: repeat(8, 1fr); /* 8 sản phẩm trên 1 hàng */
+  grid-template-columns: repeat(6, 1fr); /*  sản phẩm trên 1 hàng */
   gap: 10px;
   padding: 20px;
 }
@@ -52,4 +52,53 @@
 
 .sanpham button:hover {
   background-color: #0074e4;
+}
+
+
+/* ---- */
+/* Layout chính chia cột */
+.wrapper {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Sidebar bên trái */
+.sidebar {
+  width: 200px;
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.sidebar h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 8px;
+}
+
+.sidebar a {
+  color: #333;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  color: #1e90ff;
+}
+
+/* Danh sách sản phẩm bên phải */
+#danhSachSanPham {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 sản phẩm mỗi hàng khi có sidebar */
+  gap: 10px;
 }
